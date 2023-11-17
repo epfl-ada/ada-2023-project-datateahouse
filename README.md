@@ -41,38 +41,21 @@ We included the **Best Actor/Actress** and **Best Supporting Actor/Actress** awa
 Alongside the Oscars, we also focus on the acting awards of the "Big Three" film festivals—Berlin🐻, Cannes🌴, and Venice🦁. These awards include **Silver Bear for Best Actor/Actress**, **Prix d'interprétation masculine/féminine**, and **Volpi Cup**, we have obtained relevant data from Wikipedia, where can be found in the `ExpandedData` file.
 
 ## Methods 🧭
+The key step is to detect changes in genres. While this may seem like a simple question, it could be especially troublesome when designing an algorithm without an idea of which time period to compare with. It would lose a lot of information if we only compared each movie with actor's first movie, and comparing two consecutive movies is easily influenced by temporary changes, for example, trying a new genre only once just for fun. In fact, according to our observations, most actors change their genres gradually rather than suddenly, making it even harder to discern changes and separate different periods. Therefore, we propose using a filter window spanning several movies, which slides through the entire career of each actor. At each time step, it extracts the most frequent genres within it. As the example picture  shows, this algorithm is robust to temporary changes and generates relatively stable output compared to the original movie genres. Furthermore, we use Jaccard Similarity to measure the similarity of two consecutive window values. We set the maximum similarity as a threshold, under which we assume a big change occurs between two periods. We can then use these labels to split different periods, from which we again extract the most frequently occurring genres as the "feature genre" representing that period. To better illustrate, we manually color different periods, and specifically, we refer to those periods of length one as "transition periods," coloring them grey.
 
-The key step is to **detect the changes of genres**. While seeming a simple question, it could be especially troublesome when you design an algorithm without having idea of which time period to compare with. It will lose a lot information if we only compare each movie with his/her first movie, and it doesn't make sense either to compare two consecutive movies since it is easily influenced by temporary changes, e.g. try a new genre only once just for fun. In fact, according to our observation, most actors changed their genres gradually but not suddenly, making it even harder to dicern changes and seperate different period. Therefore, we propose to use a filter window spanning several movies, which sildes through the whole career of each actor, and at each time step extracts the most frequent genres within it. As the example picture shows, this algorithm is robust to tempory changes and generates relative stable output compared with the original movie genres. Furthermore, we use Jaccard Similarity to measure the similarity of two consecutive window values. We set the max similarity as threshold, under which we assume there is a big change occurs between two periods. We can then use these labels to split different periods, from which we again extract the most frequently occuring genres as the "feature genre" representing that period. To better illustrate, we manually color different periods, and specially, we refer to those periods of length one as "transition periods", and color them grey.
-
-By doing this, we yield the number of major changes, different periods, as well as their typical genres, for each actor. Along with existing and additional attributes (movie ratings, award nomination, etc.) we can formulate our research questions as descriptive statistics tasks and observational studies cases. Specifically, we plan to:
-
-1. address the question of "Who change their genres" by counting the number of major changes for each actor;
-
-2. analyze the effects of genre change by aggregating and compare the movie rating, movie revenue, number of award nomination etc. of two consecutive periods, or multiple kinds of combination of periods;
-
-3. visualize the genre transition by plotting a transition plot, where two identical columns record different genres and we use arrows and magnitudes to denote the transition and its number between genres two columns;
-
-4. study the pattern of timing of changing genres by analyzing the quantiles of "major change" labels in each actor's career;
-
-5. answer "whether a hugely successful movie would impact actor's changing decision" by defining an equation which measures the success of movies and thresholding them as the "treatment" of observation studies. And then we calculate the proportion of the genres of these movies that appear afterwards as outcomes.
-
-6. study the influence of movie genre itself on changing by comparing the lengths of periods featured by different genres.
-
-
-
-The key step is to detect changes in genres. While this may seem like a simple question, it could be especially troublesome when designing an algorithm without an idea of which time period to compare with. It would lose a lot of information if we only compared each movie with actor's first movie, and comparing two consecutive movies is easily influenced by temporary changes, for example, trying a new genre only once just for fun. In fact, according to our observations, most actors change their genres gradually rather than suddenly, making it even harder to discern changes and separate different periods. Therefore, we propose using a filter window spanning several movies, which slides through the entire career of each actor. At each time step, it extracts the most frequent genres within it. As the example picture shows, this algorithm is robust to temporary changes and generates relatively stable output compared to the original movie genres. Furthermore, we use Jaccard Similarity to measure the similarity of two consecutive window values. We set the maximum similarity as a threshold, under which we assume a big change occurs between two periods. We can then use these labels to split different periods, from which we again extract the most frequently occurring genres as the "feature genre" representing that period. To better illustrate, we manually color different periods, and specifically, we refer to those periods of length one as "transition periods," coloring them grey.
+![alt text](https://github.com/epfl-ada/ada-2023-project-datateahouse/blob/main/illustration.jpg)
 
 By doing this, we yield the number of major changes, different periods, as well as their typical genres for each actor. Along with existing and additional attributes (movie ratings, award nominations, etc.), we can formulate our research questions as descriptive statistics tasks and observational study cases. Specifically, we plan to:
 
-Address the question of "Who changes their genres" by counting the number of major changes for each actor.
+- Address the question of "Who changes their genres" by counting the number of major changes for each actor.
 
-Analyze the effects of genre change by aggregating and comparing movie ratings, movie revenue, the number of award nominations, etc., of two consecutive periods, or multiple kinds of combinations of periods.
+- Analyze the effects of genre change by aggregating and comparing movie ratings, movie revenue, the number of award nominations, etc., of two consecutive periods, or multiple kinds of combinations of periods.
 
-Visualize the genre transition by plotting a transition plot, where two identical columns record different genres, and we use arrows and magnitudes to denote the transition and its number between genres in two columns.
+- Visualize the genre transition by plotting a transition plot, where two identical columns record different genres, and we use arrows and magnitudes to denote the transition and its number between genres in two columns.
 
-Study the pattern of the timing of changing genres by analyzing the quantiles of "major change" labels in each actor's career.
+- Study the pattern of the timing of changing genres by analyzing the quantiles of "major change" labels in each actor's career.
 
-Answer "whether a hugely successful movie would impact an actor's changing decision" by defining an equation that measures the success of movies and thresholds them as the "treatment" of observational studies. Then, we calculate the proportion of the genres of these movies that appear afterward as outcomes.
+- Answer "whether a hugely successful movie would impact an actor's changing decision" by defining an equation that measures the success of movies and thresholds them as the "treatment" of observational studies. Then, we calculate the proportion of the genres of these movies that appear afterward as outcomes.
 
 ## Proposed Timeline 🗓️
 
