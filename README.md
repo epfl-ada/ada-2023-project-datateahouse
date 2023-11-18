@@ -41,21 +41,30 @@ We included the **Best Actor/Actress** and **Best Supporting Actor/Actress** awa
 Alongside the Oscars, we also focus on the acting awards of the "Big Three" film festivals—Berlin🐻, Cannes🌴, and Venice🦁. These awards include **Silver Bear for Best Actor/Actress**, **Prix d'interprétation masculine/féminine**, and **Volpi Cup**, we have obtained relevant data from Wikipedia, where can be found in the `ExpandedData` file.
 
 ## Methods 🧭
-The key step is to detect changes in genres. While this may seem like a simple question, it could be especially troublesome when designing an algorithm without an idea of which time period to compare with. It would lose a lot of information if we only compared each movie with actor's first movie, and comparing two consecutive movies is easily influenced by temporary changes, for example, trying a new genre only once just for fun. In fact, according to our observations, most actors change their genres gradually rather than suddenly, making it even harder to discern changes and separate different periods. Therefore, we propose using a filter window spanning several movies, which slides through the entire career of each actor. At each time step, it extracts the most frequent genres within it. As the example picture  shows, this algorithm is robust to temporary changes and generates relatively stable output compared to the original movie genres. Furthermore, we use Jaccard Similarity to measure the similarity of two consecutive window values. We set the maximum similarity as a threshold, under which we assume a big change occurs between two periods. We can then use these labels to split different periods, from which we again extract the most frequently occurring genres as the "feature genre" representing that period. To better illustrate, we manually color different periods, and specifically, we refer to those periods of length one as "transition periods," coloring them grey.
 
+## For milestone2：
+### Time Window
+Specifically speaking, the key step for us is to detect the changes of genres. According to our observation, most actors changed their genres gradually but not suddenly, making it hard to dicern changes and seperate different period. Therefore, instead of performing analysis directly on the provided movie genres, we choose to use a filter window spanning several movies to increase robustness. To be specific, we employ a sliding window with a span of 3, and meticulously traverse an actor's filmography, chronologically arranged, to pinpoint the genres of the highest frequency within the window, as the example picture shows：
 ![alt text](https://github.com/epfl-ada/ada-2023-project-datateahouse/blob/main/illustration.jpg)
+### Jaccard Similarity
+After the first step, we choosed Jaccard Similarity to measure the similarity of two consecutive window values. We use this similarity as the threshold below which a major change is considered occured. We mark those changes and use them to split periods, from which we again extract the most frequently occuring genres as the feature genres that represent that period. To better illustrate, we manually color different periods to observe the number of major changes, different periods, as well as their typical genres.
 
-By doing this, we yield the number of major changes, different periods, as well as their typical genres for each actor. Along with existing and additional attributes (movie ratings, award nominations, etc.), we can formulate our research questions as descriptive statistics tasks and observational study cases. Specifically, we plan to:
+## For our entire project:
+To address our research question, we plan to apply the following data analysis methodologies:
+### Descriptive Statistics:
+To compute the number of major changes for each actor, indicating the frequency of genre transitions.
+### Time-Series Analysis
+To analyze the impact of genre changes by comparing movie ratings, box office revenues, and award nominations across different time periods, involving the collection, aggregation, and comparison of time-series data.
+### Network Analysis:
+To draw genre transition graphs, using nodes to represent different genres and edges to signify transitions between genres, with the width of the edges representing the number of transitions, helping visualize the pattern of transitions between genres for actors.
+### Regression Analysis:
+To define a formula that measures the success of a film, such as through a combination of box office earnings, ratings, awards, etc., and to use this formula as the threshold for "treatment" and then conduct an observational study, such as employing a Regression Discontinuity Design to assess whether successful films lead to changes in actors' genres.
+### Proportion Tests:
+After determining the threshold for successful movies, calculate the proportion of actors who change genres following a successful movie, using proportion tests to compare the rates of genre change between different groups, such as before and after the success.
+### Causal Analysis:
+Sometimes there are multiple and interrelated measures of a movie's success, causal analysis can be employed to identify underlying dimensions and simplify subsequent regression analyses.
 
-- Address the question of "Who changes their genres" by counting the number of major changes for each actor.
-
-- Analyze the effects of genre change by aggregating and comparing movie ratings, movie revenue, the number of award nominations, etc., of two consecutive periods, or multiple kinds of combinations of periods.
-
-- Visualize the genre transition by plotting a transition plot, where two identical columns record different genres, and we use arrows and magnitudes to denote the transition and its number between genres in two columns.
-
-- Study the pattern of the timing of changing genres by analyzing the quantiles of "major change" labels in each actor's career.
-
-- Answer "whether a hugely successful movie would impact an actor's changing decision" by defining an equation that measures the success of movies and thresholds them as the "treatment" of observational studies. Then, we calculate the proportion of the genres of these movies that appear afterward as outcomes.
+By applying these methods, we will be able to gain insights into the patterns, temporal distributions, and potential influencing factors of actors' genre changes, as well as visualize these dynamics. Furthermore, we will be able to assess the impact of specific events (such as a highly successful movie) on actors' future role choices.
 
 ## Proposed Timeline 🗓️
 
