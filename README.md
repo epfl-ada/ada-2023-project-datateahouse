@@ -52,17 +52,16 @@ After the first step, we choosed Jaccard Similarity to measure the similarity of
 ## For our entire project:
 To address our research question, we plan to apply the following data analysis methodologies:
 ### Descriptive Statistics:
-To compute the number of major changes for each actor, indicating the frequency of genre transitions.
+Compute the number of major changes for each actor, group our data by different characteristics of actors, and then describe and compare the distributions of genre changes intra and inter groups.
+### Causal Analysis:
+Define a formula that measures the success of a film, such as through a combination of box office earnings, ratings, awards, etc., and use its output as the threshold for "treatment". Then we conduct an observational study, such as employing a Regression Discontinuity Design to assess whether successful films lead to changes in actors' genres. We are using matching algorithms to deal with potential confounders to help us draw more reliable conclusions.
+### Proportion Tests:
+Aftering defining "successful" movies, we get their genres and calculate the proportion of these genres in the periods after that, and compare with the that of the "untreated" groups.
 ### Time-Series Analysis
 To analyze the impact of genre changes by comparing movie ratings, box office revenues, and award nominations across different time periods, involving the collection, aggregation, and comparison of time-series data.
-### Network Analysis:
-To draw genre transition graphs, using nodes to represent different genres and edges to signify transitions between genres, with the width of the edges representing the number of transitions, helping visualize the pattern of transitions between genres for actors.
-### Regression Analysis:
-To define a formula that measures the success of a film, such as through a combination of box office earnings, ratings, awards, etc., and to use this formula as the threshold for "treatment" and then conduct an observational study, such as employing a Regression Discontinuity Design to assess whether successful films lead to changes in actors' genres.
-### Proportion Tests:
-After determining the threshold for successful movies, calculate the proportion of actors who change genres following a successful movie, using proportion tests to compare the rates of genre change between different groups, such as before and after the success.
-### Causal Analysis:
-Sometimes there are multiple and interrelated measures of a movie's success, causal analysis can be employed to identify underlying dimensions and simplify subsequent regression analyses.
+### Data Visualization:
+To draw genre transition graphs, using nodes to represent different genres and edges to signify transitions between genres, with the width of the edges representing the number of transitions, helping visualize the pattern of transitions between genres in general.
+
 
 By applying these methods, we will be able to gain insights into the patterns, temporal distributions, and potential influencing factors of actors' genre changes, as well as visualize these dynamics. Furthermore, we will be able to assess the impact of specific events (such as a highly successful movie) on actors' future role choices.
 
