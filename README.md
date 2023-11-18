@@ -58,12 +58,12 @@ Define a formula that measures the success of a film, such as through a combinat
 ### Proportion Tests:
 Aftering defining "successful" movies, we get their genres and calculate the proportion of these genres in the periods after that, and compare with the that of the "untreated" groups.
 ### Time-Series Analysis
-To analyze the impact of genre changes by comparing movie ratings, box office revenues, and award nominations across different time periods, involving the collection, aggregation, and comparison of time-series data.
+We analyze the impact of genre changes by comparing movie ratings, box office revenues, and award nominations across different time periods, involving the collection, aggregation, and comparison of time-series data.
 ### Data Visualization:
-To draw genre transition graphs, using nodes to represent different genres and edges to signify transitions between genres, with the width of the edges representing the number of transitions, helping visualize the pattern of transitions between genres in general.
+We draw genre transition graphs by using nodes to represent different genres and edges to signify transitions between genres, with the width of the edges representing the number of transitions, helping visualize the pattern of transitions between genres in general.
 
 
-By applying these methods, we will be able to gain insights into the patterns, temporal distributions, and potential influencing factors of actors' genre changes, as well as visualize these dynamics. Furthermore, we will be able to assess the impact of specific events (such as a highly successful movie) on actors' future role choices.
+By applying these methods, we will be able to gain insights into the patterns, temporal distributions, and potential influencing factors of actors' genre changes, as well as visualize these dynamics.
 
 ## Proposed Timeline 🗓️
 
