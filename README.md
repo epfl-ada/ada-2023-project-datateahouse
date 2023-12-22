@@ -1,7 +1,7 @@
 # Shifting Scenes: A Deep Dive into Actors' Movie Genre Selections 🕺
 
 ## Data Story
-Please visit our data story [here] (https://xixismile-ops.github.io). The final code is presented in the finalize.ipynb.
+Please visit our data story [here](https://xixismile-ops.github.io). The final code is presented in the finalize.ipynb.
 
 ## Abstract💭
 This study seeks to delve into the intricate choices actors make in selecting roles and the underlying influences guiding these decisions. In a profession that captures the dreams of countless aspiring individuals, an actor's selection of roles not only molds their career trajectory but also leaves a lasting imprint on the audience's cinematic journey. It is noteworthy that many actors embark on diverse movie genres throughout their careers, transitioning, for instance, from a comedic beginning to embracing more serious film genres. Our exploration will systematically examine the scientific criteria for gauging these actor transformations, focusing on analyzing how these shifts impact their careers and elicit responses from the audience. Additionally, we will delve into individual factors influencing actor transformations, such as age, box office revenue, reputation, and societal factors like specific historical periods and evolving social trends.
