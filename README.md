@@ -11,15 +11,11 @@ This study seeks to delve into the intricate choices actors make in selecting ro
 
 Our research focuses on the following five key questions:
 
-1. Which actors tend to stick to a relatively fixed movie genre, and which ones exhibit more versatility? Is there a greater proportion of actors who change genres or those who stay consistent? Are there differences in terms of gender, length of an actor's career, and other factors?
-
-2. In which movie genres are actors more inclined to undergo transitions? Conversely, which movie genres see less variation among actors? From the perspective of an actor's career, is there a discernible pattern in the timing of these transitions?
-
-3. Do actors achieve greater success after undergoing transitions? Is there an improvement in their movie box office performance and ratings? Are there more significant achievements in awards and recognitions?
-
-4. From an individual perspective, why do actors choose to transition? Is it due to a sense of monotony with a particular film style? Or is it because the age factor makes them no longer suited to certain types of movies? Could their decision be inspired by the enormous success of a particular film they were involved in?
-
-5. From a societal perspective, why do actors choose to transition? Are there specific historical periods where the proportion of actors undergoing transitions significantly increased? If yes, is this correlation tied to changes in public viewing preferences, social trends, and societal issues? (Reference to historical context may be required)
+1. How do we measure the genre changes of actors during their careers? How can we depict the general patterns in actors' choices of genres and their transformations?
+2. Which actors experience fewer genre changes and which experience more?
+3. What impact does the era have on the distribution of movie themes? What effect does it have on the actors' choices of movie genres?
+4. What is the relationship between personal factors of actors, like height and gender, and their genre changes? How can we make a more specific qualitative and quantitative assessment of these transformations? What deeper social meanings do they imply?
+5. Among award-winning actors, are they more inclined to stay in their comfort zones or to try more diverse fields? What drives their subsequent transformations?
 
 ## Additional Datasets 📊
 
