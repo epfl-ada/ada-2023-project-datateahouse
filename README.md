@@ -29,7 +29,7 @@ We're utilizing [the World Bank CPI dataset](https://data.worldbank.org/indicato
 
 ### IMDb
 
-To diversify our analysis of a movie's success, we extracted two datasets, `title.ratings` and `title.basics`, from [IMDb](https://datasets.imdbws.com) to add a new dimension to our study of actor transformation.
+To diversify our analysis of a movie's success, we extracted two datasets, `title.ratings` and `title.basics`, from [IMDb](https://datasets.imdbws.com) to add a new dimension to our study of actor transformation. (NOTE: the `title.basic.tsv` is too large to upload to the repository and thus not inlcluded in the `ExpandedData` directory. Please manually download it from the link.)
 
 ### Oscar
 
